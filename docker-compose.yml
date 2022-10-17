@@ -2,7 +2,9 @@ version: "3.9"
    
 services:
   pocketbase:
-    image: pocketbase
+    build:
+      context: .
+      dockerfile: ./pocketbase/Dockerfile
     volumes:
       - totallyMetal:/pb/pb_data
     ports:
@@ -10,7 +12,7 @@ services:
   scraper:
     build:
       context: .
-      dockerfile: ./scraper/Dockerfile
+      dockerfile: ./src/Dockerfile
     depends_on:
       - pocketbase
 volumes:
