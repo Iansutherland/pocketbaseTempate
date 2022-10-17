@@ -5,4 +5,4 @@ WORKDIR "/app"
 RUN npm install
 
 # start
-CMD ["npm", "run", "scrape"]
+CMD ["npm", "run", "start"]

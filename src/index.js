@@ -4,7 +4,6 @@ if (!globalThis.fetch) {
     globalThis.fetch = fetch;
 }
 import PocketBase from 'pocketbase';
-import cron from 'node-cron';
 
 
 async function Run() {
